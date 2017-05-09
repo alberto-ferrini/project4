@@ -10,13 +10,17 @@ import { InactiveUsersComponent } from './inactive-users/inactive-users.componen
 import { UserService } from './services/user.service';
 import { CounterService } from './services/counter.service';
 import { CounterComponent } from './counter/counter.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { OptionsComponent } from './options/options.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActiveUsersComponent,
     InactiveUsersComponent,
-    CounterComponent
+    CounterComponent,
+    AddUserComponent,
+    OptionsComponent
   ],
   imports: [
     BrowserModule,

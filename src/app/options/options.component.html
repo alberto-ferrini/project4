@@ -1,0 +1,2 @@
+<button class="btn btn-primary" (click)="toggleAddForm()" [ngClass]="{'active':isAddFormVisible()}">Add user...</button>
+<app-add-user *ngIf="isAddFormVisible()"></app-add-user>

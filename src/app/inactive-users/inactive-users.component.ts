@@ -7,12 +7,15 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./inactive-users.component.css']
 })
 export class InactiveUsersComponent {
+  
   constructor(
     private userService:UserService
   ){}
 
 
-  onSetToActive(id: number) {
+
+  public onSetToActive(id: number) {
     this.userService.setActive(id);
   }
+
 }

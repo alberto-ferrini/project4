@@ -3,7 +3,7 @@
   <li
     class="list-group-item"
     *ngFor="let user of userService.getActiveUsers(); let i = index">
-    <button class="btn btn-warning btn-sm" (click)="userService.setInactive(i)">Deactive</button> {{ user.name }}
+    <button class="btn btn-warning btn-sm" (click)="userService.setInactive(i)">Deactive</button> {{ user.username }}
   </li>
 </ul>
 <p>Total: {{ userService.getActiveUsers().length }}</p>

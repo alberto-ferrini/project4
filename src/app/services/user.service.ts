@@ -22,7 +22,7 @@ export class UserService{
         var user=this.activeUsers.splice(index,1)[0];
         this.inactiveUsers.push(user);
         this.counterService.countDeactivation();
-        console.log("SET to INACTIVE: "+user.name);
+        console.log("SET to INACTIVE: "+user.toString());
 
     }
 
@@ -30,7 +30,7 @@ export class UserService{
         var user=this.inactiveUsers.splice(index,1)[0];
         this.activeUsers.push(user);
         this.counterService.countActivation();
-        console.log("SET to ACTIVE: "+user.name);
+        console.log("SET to ACTIVE: "+user.toString());
     }
 
     public getActiveUsers(){
@@ -39,5 +39,9 @@ export class UserService{
 
     public getInactiveUsers(){
         return this.inactiveUsers;
+    }
+
+    public add(user:User){
+        this.inactiveUsers.push(user);
     }
 }
